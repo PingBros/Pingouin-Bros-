@@ -7,8 +7,7 @@ Nous souhaitons donc réaliser cela avec une interface graphique SDL. Afin de pr
 
 
 Diagramme de Gantt :
-
-[diag_gantt-pingouin_bros.pdf](https://github.com/PingBros/Pingouin-Bros-/files/10520238/diag_gantt-pingouin_bros.pdf)
+https://docs.google.com/spreadsheets/d/138Xqyaz2DXm59DWzDnpY_8Z15Dv9eeuY-C0z8CYKNhc/edit?usp=sharing
 
 Descriptif des tâches effectués chaque semaine avec description :
 https://github.com/users/PingBros/projects/2/views/1
