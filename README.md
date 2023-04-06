@@ -19,6 +19,6 @@ Hugo Chevallier
 Lucas Barbet 
 Kylian Patault
 
-Etudiant L2 Info TDB TP4
-institut Claude Chappe
+Étudiants L2 Info TDB TP4
+Institut Claude Chappe
 univ-lemans.fr
