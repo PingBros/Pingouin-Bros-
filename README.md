@@ -15,10 +15,15 @@ Descriptif des tâches effectués chaque semaine :
 https://github.com/users/PingBros/projects/2/views/1
 
 Antoine Teissier
+
 Hugo Chevallier
+
 Lucas Barbet 
+
 Kylian Patault
 
 Étudiants L2 Info TDB TP4
+
 Institut Claude Chappe
+
 univ-lemans.fr
