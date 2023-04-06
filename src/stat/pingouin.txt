@@ -1,0 +1,9 @@
+Nom=GMK
+Vie=100
+Degats=255
+Vitesse_d=30
+Vitesse_a=30
+Defense=80
+Saut=2
+Direction=0
+X=3 Y=15
