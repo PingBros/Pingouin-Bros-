@@ -1,4 +1,0 @@
-Pseudo=GMK
-Chemin_Stat_Joueur=../src/stat/pingouin.txt
-NombreItem=1
-Nom=bouclier
