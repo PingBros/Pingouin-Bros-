@@ -1,9 +1,0 @@
-Nom=Pingouin
-Vie=100
-Degats=10
-Vitesse_d=30
-Vitesse_a=15
-Defense=5
-Saut=2
-Direction=0
-X=3 Y=15
