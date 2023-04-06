@@ -1,0 +1,216 @@
+\hypertarget{pingouin_8h}{}\doxysection{Référence du fichier lib/pingouin.h}
+\label{pingouin_8h}\index{lib/pingouin.h@{lib/pingouin.h}}
+
+
+Fichier pour la structure pingouin.  
+
+
+{\ttfamily \#include \char`\"{}item.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}personnage.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Structure pour le personnage Pingouin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pingouin_8h_a1b40ceb455086d9cdb68ed3d3bf2775f}\label{pingouin_8h_a1b40ceb455086d9cdb68ed3d3bf2775f}} 
+\#define {\bfseries MAX\+\_\+\+ITEMS}~5
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pingouin_8h_a88af7b1f1f13debfa93a1e839ec2d81c}\label{pingouin_8h_a88af7b1f1f13debfa93a1e839ec2d81c}} 
+typedef struct \mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+s}} {\bfseries pingouin\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pingouin_8h_ab1822768bfbe3b5e48c5a8e50e3873da}{afficher\+\_\+pingouin}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage des stats et des items du pingouin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_aaba13faf4cb7600ad1c50e78db0c70f9}{creation\+\_\+pingouin}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping, char $\ast$nom\+Dossier, char $\ast$pseudo)
+\begin{DoxyCompactList}\small\item\em Fonction de création des stats à partir d\textquotesingle{}un fichier texte et de l\textquotesingle{}item principal du pingouin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_ace70e5ae1cdb5ff810fc1ac9da8f7c49}{ajouter\+\_\+item}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping, \mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}ajout d\textquotesingle{}un item pour le pingouin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_a8d3ed3d1a774ebb53d6010f6555ec35d}{sauvegarder\+\_\+ping}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping)
+\begin{DoxyCompactList}\small\item\em sauvegarde les données d\textquotesingle{}un joueur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_ac07f77eb241252a73186906357bce793}{appliquer\+\_\+items}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping)
+\begin{DoxyCompactList}\small\item\em Fonction pour appliquer les boosts des items au pingouin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_ad078709946768cfdc9289eca43edc012}{retirer\+\_\+items}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping)
+\begin{DoxyCompactList}\small\item\em Fonction pour retirer les boosts des items au pingouin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pingouin_8h_af879a8f037385c633eb653e81b33bd92}\label{pingouin_8h_af879a8f037385c633eb653e81b33bd92}} 
+void {\bfseries charger\+\_\+ping} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping, char $\ast$nom\+Dossier, char $\ast$pseudo, \mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$listeG\mbox{[}3\mbox{]}, int nb\+ItemG)
+\item 
+void \mbox{\hyperlink{pingouin_8h_a7191a5d88c09c5a30fe29f27e160c1f1}{supprimer\+\_\+item}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$ping, \mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Fonction de suppression d\textquotesingle{}un item pour le pingouin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pingouin_8h_a36731059095a5a09ee0bffe7cef59a48}{destruction\+\_\+pingouin}} (\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$$\ast$ping)
+\begin{DoxyCompactList}\small\item\em Fonction de destruction d\textquotesingle{}un pingouin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier pour la structure pingouin. 
+
+\begin{DoxyAuthor}{Auteur}
+Projet Pingouin Bros 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9 Février 2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{pingouin_8h_ab1822768bfbe3b5e48c5a8e50e3873da}\label{pingouin_8h_ab1822768bfbe3b5e48c5a8e50e3873da}} 
+\index{pingouin.h@{pingouin.h}!afficher\_pingouin@{afficher\_pingouin}}
+\index{afficher\_pingouin@{afficher\_pingouin}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_pingouin()}{afficher\_pingouin()}}
+{\footnotesize\ttfamily void afficher\+\_\+pingouin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}affichage des stats et des items du pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_ace70e5ae1cdb5ff810fc1ac9da8f7c49}\label{pingouin_8h_ace70e5ae1cdb5ff810fc1ac9da8f7c49}} 
+\index{pingouin.h@{pingouin.h}!ajouter\_item@{ajouter\_item}}
+\index{ajouter\_item@{ajouter\_item}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{ajouter\_item()}{ajouter\_item()}}
+{\footnotesize\ttfamily void ajouter\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping,  }\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}ajout d\textquotesingle{}un item pour le pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+{\em item} & structure item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_ac07f77eb241252a73186906357bce793}\label{pingouin_8h_ac07f77eb241252a73186906357bce793}} 
+\index{pingouin.h@{pingouin.h}!appliquer\_items@{appliquer\_items}}
+\index{appliquer\_items@{appliquer\_items}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{appliquer\_items()}{appliquer\_items()}}
+{\footnotesize\ttfamily void appliquer\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping }\end{DoxyParamCaption})}
+
+
+
+Fonction pour appliquer les boosts des items au pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_aaba13faf4cb7600ad1c50e78db0c70f9}\label{pingouin_8h_aaba13faf4cb7600ad1c50e78db0c70f9}} 
+\index{pingouin.h@{pingouin.h}!creation\_pingouin@{creation\_pingouin}}
+\index{creation\_pingouin@{creation\_pingouin}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{creation\_pingouin()}{creation\_pingouin()}}
+{\footnotesize\ttfamily void creation\+\_\+pingouin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping,  }\item[{char $\ast$}]{nom\+Dossier,  }\item[{char $\ast$}]{pseudo }\end{DoxyParamCaption})}
+
+
+
+Fonction de création des stats à partir d\textquotesingle{}un fichier texte et de l\textquotesingle{}item principal du pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+{\em nom\+Dossier} & fichier de sauvegarde des stats du futur Pingouin \\
+\hline
+{\em pseudo} & pseudo du joueurs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_a36731059095a5a09ee0bffe7cef59a48}\label{pingouin_8h_a36731059095a5a09ee0bffe7cef59a48}} 
+\index{pingouin.h@{pingouin.h}!destruction\_pingouin@{destruction\_pingouin}}
+\index{destruction\_pingouin@{destruction\_pingouin}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{destruction\_pingouin()}{destruction\_pingouin()}}
+{\footnotesize\ttfamily void destruction\+\_\+pingouin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$$\ast$}]{ping }\end{DoxyParamCaption})}
+
+
+
+Fonction de destruction d\textquotesingle{}un pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_ad078709946768cfdc9289eca43edc012}\label{pingouin_8h_ad078709946768cfdc9289eca43edc012}} 
+\index{pingouin.h@{pingouin.h}!retirer\_items@{retirer\_items}}
+\index{retirer\_items@{retirer\_items}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{retirer\_items()}{retirer\_items()}}
+{\footnotesize\ttfamily void retirer\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping }\end{DoxyParamCaption})}
+
+
+
+Fonction pour retirer les boosts des items au pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pingouin_8h_a8d3ed3d1a774ebb53d6010f6555ec35d}\label{pingouin_8h_a8d3ed3d1a774ebb53d6010f6555ec35d}} 
+\index{pingouin.h@{pingouin.h}!sauvegarder\_ping@{sauvegarder\_ping}}
+\index{sauvegarder\_ping@{sauvegarder\_ping}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarder\_ping()}{sauvegarder\_ping()}}
+{\footnotesize\ttfamily sauvegarder\+\_\+ping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping }\end{DoxyParamCaption})}
+
+
+
+sauvegarde les données d\textquotesingle{}un joueur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & joueur que l\textquotesingle{}on veut sauvegarder \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pingouin_8h_a7191a5d88c09c5a30fe29f27e160c1f1}\label{pingouin_8h_a7191a5d88c09c5a30fe29f27e160c1f1}} 
+\index{pingouin.h@{pingouin.h}!supprimer\_item@{supprimer\_item}}
+\index{supprimer\_item@{supprimer\_item}!pingouin.h@{pingouin.h}}
+\doxysubsubsection{\texorpdfstring{supprimer\_item()}{supprimer\_item()}}
+{\footnotesize\ttfamily void supprimer\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpingouin__s}{pingouin\+\_\+t}} $\ast$}]{ping,  }\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Fonction de suppression d\textquotesingle{}un item pour le pingouin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ping} & structure pingouin \\
+\hline
+{\em item} & structure item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}

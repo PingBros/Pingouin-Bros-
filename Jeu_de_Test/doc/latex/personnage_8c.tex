@@ -1,0 +1,146 @@
+\hypertarget{personnage_8c}{}\doxysection{Référence du fichier src/personnage.c}
+\label{personnage_8c}\index{src/personnage.c@{src/personnage.c}}
+
+
+Fichier pour la gestion d\textquotesingle{}un personnage.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../lib/personnage.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{personnage_8c_a738887643e2a12f694d8a37b1ff95839}\label{personnage_8c_a738887643e2a12f694d8a37b1ff95839}} 
+\#define {\bfseries MAXCAR}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{personnage_8c_a59eb894a7f99ef1eb3d7f491bd2563c0}{affiche\+\_\+personnage}} (\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$pers)
+\begin{DoxyCompactList}\small\item\em Affiche les states d\textquotesingle{}un personnage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{personnage_8c_a66d93b3a6c9ca5cd769608068dd9c4b5}{affiche\+\_\+direction}} (direction\+\_\+t dir)
+\begin{DoxyCompactList}\small\item\em Affiche la direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{personnage_8c_a0f991115c3acd94289d532b604a185c5}{gestion\+\_\+stat}} (int $\ast$stat, int valeur)
+\begin{DoxyCompactList}\small\item\em boost une stat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{personnage_8c_a5f9c7b97e91850a0808d2eb759e1c77d}{charger\+\_\+base}} (\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$pers, char $\ast$nom\+Dossier)
+\begin{DoxyCompactList}\small\item\em charge une base de stat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{personnage_8c_a6f9bf940d2ac7beb72fa35956e5901f7}{sauvegarder\+\_\+base}} (\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$pers, char $\ast$nom\+Dossier)
+\begin{DoxyCompactList}\small\item\em sauvegarde une base de stat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{personnage_8c_a4d16499f1c796e0a1c52f341d5fc6d13}{destruction\+\_\+personnage}} (\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$$\ast$pers)
+\begin{DoxyCompactList}\small\item\em destruction d\textquotesingle{}un personnage \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier pour la gestion d\textquotesingle{}un personnage. 
+
+\begin{DoxyAuthor}{Auteur}
+Antoine Teissier \& Lucas Barbet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9 Février 2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{personnage_8c_a66d93b3a6c9ca5cd769608068dd9c4b5}\label{personnage_8c_a66d93b3a6c9ca5cd769608068dd9c4b5}} 
+\index{personnage.c@{personnage.c}!affiche\_direction@{affiche\_direction}}
+\index{affiche\_direction@{affiche\_direction}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{affiche\_direction()}{affiche\_direction()}}
+{\footnotesize\ttfamily void affiche\+\_\+direction (\begin{DoxyParamCaption}\item[{direction\+\_\+t}]{dir }\end{DoxyParamCaption})}
+
+
+
+Affiche la direction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dir} & direction a afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{personnage_8c_a59eb894a7f99ef1eb3d7f491bd2563c0}\label{personnage_8c_a59eb894a7f99ef1eb3d7f491bd2563c0}} 
+\index{personnage.c@{personnage.c}!affiche\_personnage@{affiche\_personnage}}
+\index{affiche\_personnage@{affiche\_personnage}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{affiche\_personnage()}{affiche\_personnage()}}
+{\footnotesize\ttfamily void affiche\+\_\+personnage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$}]{pers }\end{DoxyParamCaption})}
+
+
+
+Affiche les states d\textquotesingle{}un personnage. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pers} & le personnage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{personnage_8c_a5f9c7b97e91850a0808d2eb759e1c77d}\label{personnage_8c_a5f9c7b97e91850a0808d2eb759e1c77d}} 
+\index{personnage.c@{personnage.c}!charger\_base@{charger\_base}}
+\index{charger\_base@{charger\_base}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{charger\_base()}{charger\_base()}}
+{\footnotesize\ttfamily void charger\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$}]{pers,  }\item[{char $\ast$}]{nom\+Dossier }\end{DoxyParamCaption})}
+
+
+
+charge une base de stat 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pers} & personnage où il faut stocker les states \\
+\hline
+{\em nom\+Dossier} & chemin vers le ficheir avec les stats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{personnage_8c_a4d16499f1c796e0a1c52f341d5fc6d13}\label{personnage_8c_a4d16499f1c796e0a1c52f341d5fc6d13}} 
+\index{personnage.c@{personnage.c}!destruction\_personnage@{destruction\_personnage}}
+\index{destruction\_personnage@{destruction\_personnage}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{destruction\_personnage()}{destruction\_personnage()}}
+{\footnotesize\ttfamily void destruction\+\_\+personnage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$$\ast$}]{pers }\end{DoxyParamCaption})}
+
+
+
+destruction d\textquotesingle{}un personnage 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pers} & structure personnage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{personnage_8c_a0f991115c3acd94289d532b604a185c5}\label{personnage_8c_a0f991115c3acd94289d532b604a185c5}} 
+\index{personnage.c@{personnage.c}!gestion\_stat@{gestion\_stat}}
+\index{gestion\_stat@{gestion\_stat}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{gestion\_stat()}{gestion\_stat()}}
+{\footnotesize\ttfamily void gestion\+\_\+stat (\begin{DoxyParamCaption}\item[{int $\ast$}]{stat,  }\item[{int}]{valeur }\end{DoxyParamCaption})}
+
+
+
+boost une stat 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em stat} & stat a boost \\
+\hline
+{\em valeur} & valeur du boost \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{personnage_8c_a6f9bf940d2ac7beb72fa35956e5901f7}\label{personnage_8c_a6f9bf940d2ac7beb72fa35956e5901f7}} 
+\index{personnage.c@{personnage.c}!sauvegarder\_base@{sauvegarder\_base}}
+\index{sauvegarder\_base@{sauvegarder\_base}!personnage.c@{personnage.c}}
+\doxysubsubsection{\texorpdfstring{sauvegarder\_base()}{sauvegarder\_base()}}
+{\footnotesize\ttfamily void sauvegarder\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpersonnage__s}{personnage\+\_\+t}} $\ast$}]{pers,  }\item[{char $\ast$}]{nom\+Dossier }\end{DoxyParamCaption})}
+
+
+
+sauvegarde une base de stat 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pers} & personnage où il faut sauvegarder les stats \\
+\hline
+{\em nom\+Dossier} & chemin vers le fichier avec les stats \\
+\hline
+\end{DoxyParams}

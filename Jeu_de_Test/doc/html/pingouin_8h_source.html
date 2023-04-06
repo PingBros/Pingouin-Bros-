@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjetDocu_Pingouin_Bros:  Fichier source de lib/pingouin.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjetDocu_Pingouin_Bros
+   </div>
+   <div id="projectbrief">Documentation des programmes du jeu Pingouin Bros</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pingouin.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pingouin_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#ifndef ITEM_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//#define ITEM_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="item_8h.html">item.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#endif </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//#ifndef PERSONNAGE_H_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//#define PERSONNAGE_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="personnage_8h.html">personnage.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//#endif </span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define MAX_ITEMS 5</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structpingouin__s.html">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structpingouin__s.html">pingouin_s</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structpingouin__s.html#aab6fd985e87ef0cb804f06ece8c16ea7">   27</a></span>&#160;  <a class="code" href="structpersonnage__s.html">personnage_t</a> *<a class="code" href="structpingouin__s.html#aab6fd985e87ef0cb804f06ece8c16ea7">pers</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structpingouin__s.html#a69140fb473b93905c3641b6cc106cf15">   28</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structpingouin__s.html#a69140fb473b93905c3641b6cc106cf15">nb_item</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structpingouin__s.html#a4186ca6d54d3796504fdfda17141fa2d">   29</a></span>&#160;  <a class="code" href="structitem__s.html">item_t</a> *<a class="code" href="structpingouin__s.html#a4186ca6d54d3796504fdfda17141fa2d">liste</a>[MAX_ITEMS];</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structpingouin__s.html#ae5c34fb078ef2309eb6539306921d7b0">   30</a></span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structpingouin__s.html#ae5c34fb078ef2309eb6539306921d7b0">cheminStatJoueur</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;} <a class="code" href="structpingouin__s.html">pingouin_t</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#ab1822768bfbe3b5e48c5a8e50e3873da">afficher_pingouin</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#aaba13faf4cb7600ad1c50e78db0c70f9">creation_pingouin</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping, <span class="keywordtype">char</span> *nomDossier, <span class="keywordtype">char</span> *pseudo);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#ace70e5ae1cdb5ff810fc1ac9da8f7c49">ajouter_item</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping, <a class="code" href="structitem__s.html">item_t</a> *item);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#a8d3ed3d1a774ebb53d6010f6555ec35d">sauvegarder_ping</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#ac07f77eb241252a73186906357bce793">appliquer_items</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#ad078709946768cfdc9289eca43edc012">retirer_items</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> charger_ping(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping, <span class="keywordtype">char</span> *nomDossier, <span class="keywordtype">char</span> *pseudo, <a class="code" href="structitem__s.html">item_t</a> *listeG[3], <span class="keywordtype">int</span> nbItemG);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#a7191a5d88c09c5a30fe29f27e160c1f1">supprimer_item</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> *ping, <a class="code" href="structitem__s.html">item_t</a> *item);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pingouin_8h.html#a36731059095a5a09ee0bffe7cef59a48">destruction_pingouin</a>(<a class="code" href="structpingouin__s.html">pingouin_t</a> **ping);</div>
+<div class="ttc" id="aitem_8h_html"><div class="ttname"><a href="item_8h.html">item.h</a></div><div class="ttdoc">Fichier pour la structure item.</div></div>
+<div class="ttc" id="apersonnage_8h_html"><div class="ttname"><a href="personnage_8h.html">personnage.h</a></div><div class="ttdoc">Fichier pour la structure personnage.</div></div>
+<div class="ttc" id="apingouin_8h_html_a36731059095a5a09ee0bffe7cef59a48"><div class="ttname"><a href="pingouin_8h.html#a36731059095a5a09ee0bffe7cef59a48">destruction_pingouin</a></div><div class="ttdeci">void destruction_pingouin(pingouin_t **ping)</div><div class="ttdoc">Fonction de destruction d'un pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:255</div></div>
+<div class="ttc" id="apingouin_8h_html_a7191a5d88c09c5a30fe29f27e160c1f1"><div class="ttname"><a href="pingouin_8h.html#a7191a5d88c09c5a30fe29f27e160c1f1">supprimer_item</a></div><div class="ttdeci">void supprimer_item(pingouin_t *ping, item_t *item)</div><div class="ttdoc">Fonction de suppression d'un item pour le pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:236</div></div>
+<div class="ttc" id="apingouin_8h_html_a8d3ed3d1a774ebb53d6010f6555ec35d"><div class="ttname"><a href="pingouin_8h.html#a8d3ed3d1a774ebb53d6010f6555ec35d">sauvegarder_ping</a></div><div class="ttdeci">void sauvegarder_ping(pingouin_t *ping)</div><div class="ttdoc">sauvegarde les données d'un joueur</div><div class="ttdef"><b>Definition:</b> pingouin.c:116</div></div>
+<div class="ttc" id="apingouin_8h_html_aaba13faf4cb7600ad1c50e78db0c70f9"><div class="ttname"><a href="pingouin_8h.html#aaba13faf4cb7600ad1c50e78db0c70f9">creation_pingouin</a></div><div class="ttdeci">void creation_pingouin(pingouin_t *ping, char *nomDossier, char *pseudo)</div><div class="ttdoc">Fonction de création des stats à partir d'un fichier texte et de l'item principal du pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:45</div></div>
+<div class="ttc" id="apingouin_8h_html_ab1822768bfbe3b5e48c5a8e50e3873da"><div class="ttname"><a href="pingouin_8h.html#ab1822768bfbe3b5e48c5a8e50e3873da">afficher_pingouin</a></div><div class="ttdeci">void afficher_pingouin(pingouin_t *ping)</div><div class="ttdoc">Fonction d'affichage des stats et des items du pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:27</div></div>
+<div class="ttc" id="apingouin_8h_html_ac07f77eb241252a73186906357bce793"><div class="ttname"><a href="pingouin_8h.html#ac07f77eb241252a73186906357bce793">appliquer_items</a></div><div class="ttdeci">void appliquer_items(pingouin_t *ping)</div><div class="ttdoc">Fonction pour appliquer les boosts des items au pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:141</div></div>
+<div class="ttc" id="apingouin_8h_html_ace70e5ae1cdb5ff810fc1ac9da8f7c49"><div class="ttname"><a href="pingouin_8h.html#ace70e5ae1cdb5ff810fc1ac9da8f7c49">ajouter_item</a></div><div class="ttdeci">void ajouter_item(pingouin_t *ping, item_t *item)</div><div class="ttdoc">Fonction d'ajout d'un item pour le pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:212</div></div>
+<div class="ttc" id="apingouin_8h_html_ad078709946768cfdc9289eca43edc012"><div class="ttname"><a href="pingouin_8h.html#ad078709946768cfdc9289eca43edc012">retirer_items</a></div><div class="ttdeci">void retirer_items(pingouin_t *ping)</div><div class="ttdoc">Fonction pour retirer les boosts des items au pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.c:176</div></div>
+<div class="ttc" id="astructitem__s_html"><div class="ttname"><a href="structitem__s.html">item_s</a></div><div class="ttdoc">Structure pour un item.</div><div class="ttdef"><b>Definition:</b> item.h:22</div></div>
+<div class="ttc" id="astructpersonnage__s_html"><div class="ttname"><a href="structpersonnage__s.html">personnage_s</a></div><div class="ttdoc">Structure pour chaque personnage.</div><div class="ttdef"><b>Definition:</b> personnage.h:30</div></div>
+<div class="ttc" id="astructpingouin__s_html"><div class="ttname"><a href="structpingouin__s.html">pingouin_s</a></div><div class="ttdoc">Structure pour le personnage Pingouin.</div><div class="ttdef"><b>Definition:</b> pingouin.h:26</div></div>
+<div class="ttc" id="astructpingouin__s_html_a4186ca6d54d3796504fdfda17141fa2d"><div class="ttname"><a href="structpingouin__s.html#a4186ca6d54d3796504fdfda17141fa2d">pingouin_s::liste</a></div><div class="ttdeci">item_t * liste[MAX_ITEMS]</div><div class="ttdoc">liste d'items que possède le Pingouin</div><div class="ttdef"><b>Definition:</b> pingouin.h:29</div></div>
+<div class="ttc" id="astructpingouin__s_html_a69140fb473b93905c3641b6cc106cf15"><div class="ttname"><a href="structpingouin__s.html#a69140fb473b93905c3641b6cc106cf15">pingouin_s::nb_item</a></div><div class="ttdeci">int nb_item</div><div class="ttdoc">nombre d'item détenu</div><div class="ttdef"><b>Definition:</b> pingouin.h:28</div></div>
+<div class="ttc" id="astructpingouin__s_html_aab6fd985e87ef0cb804f06ece8c16ea7"><div class="ttname"><a href="structpingouin__s.html#aab6fd985e87ef0cb804f06ece8c16ea7">pingouin_s::pers</a></div><div class="ttdeci">personnage_t * pers</div><div class="ttdoc">structure vers les données du Pingouin</div><div class="ttdef"><b>Definition:</b> pingouin.h:27</div></div>
+<div class="ttc" id="astructpingouin__s_html_ae5c34fb078ef2309eb6539306921d7b0"><div class="ttname"><a href="structpingouin__s.html#ae5c34fb078ef2309eb6539306921d7b0">pingouin_s::cheminStatJoueur</a></div><div class="ttdeci">char * cheminStatJoueur</div><div class="ttdoc">chemin vers le .txt où les données du Pingouin sont sauvegardées</div><div class="ttdef"><b>Definition:</b> pingouin.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
