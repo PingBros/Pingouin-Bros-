@@ -1,0 +1,9 @@
+Nom=testP
+Vie=20
+Degats=20
+Vitesse_d=20
+Vitesse_a=20
+Defense=920
+Saut=3
+Direction=0
+X=2 Y=20
