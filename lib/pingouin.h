@@ -39,3 +39,5 @@ extern void retirer_items(pingouin_t *ping);
 extern void charger_ping(pingouin_t *ping, char *nomDossier, char *pseudo, item_t *listeG[3], int nbItemG);
 extern void supprimer_item(pingouin_t *ping, item_t *item);
 extern void destruction_pingouin(pingouin_t **ping);
+extern void calcul_degats(personnage_t *p1, personnage_t *p2);
+extern int vivant(personnage_t *pers);

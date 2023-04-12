@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjetDocu_Pingouin_Bros:  Fichier source de lib/personnage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjetDocu_Pingouin_Bros
+   </div>
+   <div id="projectbrief">Documentation des programmes du jeu Pingouin Bros</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">personnage.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="personnage_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef COORDONNEES_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define COORDONNEES_H_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coordonnees_8h.html">coordonnees.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="personnage_8h.html#aa9aabf24ef46feff65320960721536e6">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="personnage_8h.html#aa9aabf24ef46feff65320960721536e6">direction_s</a> { DROITE , GAUCHE } direction_t ;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structpersonnage__s.html">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structpersonnage__s.html">personnage_s</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#ac0fc9fa7fa00b5d1e1ba1ad3a424cef3">   31</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structpersonnage__s.html#ac0fc9fa7fa00b5d1e1ba1ad3a424cef3">nom</a>; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a1adc71aec3e735adb623d543d25dcd1b">   32</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a1adc71aec3e735adb623d543d25dcd1b">vie</a>; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a18ebf3e3153619aa484739070e0d4021">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a18ebf3e3153619aa484739070e0d4021">degats</a>; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a608710a15fa5b89eebfc67a85864a32e">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a608710a15fa5b89eebfc67a85864a32e">vitesse_d</a>; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a94b5cf3f5c47f9de3b046ebdec525a19">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a94b5cf3f5c47f9de3b046ebdec525a19">vitesse_a</a>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a79d6819e210b4b2106d0930597820632">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a79d6819e210b4b2106d0930597820632">defense</a>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a870a2430756f04298910a728e32c476d">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpersonnage__s.html#a870a2430756f04298910a728e32c476d">saut</a>; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a00134b9099abbe6b8e87e75d1bc59cf5">   38</a></span>&#160;    direction_t <a class="code" href="structpersonnage__s.html#a00134b9099abbe6b8e87e75d1bc59cf5">direction</a>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structpersonnage__s.html#a8d197cd7e2cf68298acfb7e1b08cf0a9">   39</a></span>&#160;    <a class="code" href="structcoordonnees__s.html">coordonnees_t</a> <a class="code" href="structpersonnage__s.html#a8d197cd7e2cf68298acfb7e1b08cf0a9">coord</a>; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="structpersonnage__s.html">personnage_t</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a59eb894a7f99ef1eb3d7f491bd2563c0">affiche_personnage</a>(<a class="code" href="structpersonnage__s.html">personnage_t</a> * pers);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a66d93b3a6c9ca5cd769608068dd9c4b5">affiche_direction</a>(direction_t dir);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a5f9c7b97e91850a0808d2eb759e1c77d">charger_base</a>(<a class="code" href="structpersonnage__s.html">personnage_t</a> * pers,<span class="keywordtype">char</span> * nomDossier);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a6f9bf940d2ac7beb72fa35956e5901f7">sauvegarder_base</a>(<a class="code" href="structpersonnage__s.html">personnage_t</a> *pers, <span class="keywordtype">char</span> *nomDossier); </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a0f991115c3acd94289d532b604a185c5">gestion_stat</a>(<span class="keywordtype">int</span> * stat, <span class="keywordtype">int</span> valeur);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="personnage_8h.html#a4d16499f1c796e0a1c52f341d5fc6d13">destruction_personnage</a>(<a class="code" href="structpersonnage__s.html">personnage_t</a> ** pers);</div>
+<div class="ttc" id="acoordonnees_8h_html"><div class="ttname"><a href="coordonnees_8h.html">coordonnees.h</a></div><div class="ttdoc">Fichier pour la structure coordonnees.</div></div>
+<div class="ttc" id="apersonnage_8h_html_a0f991115c3acd94289d532b604a185c5"><div class="ttname"><a href="personnage_8h.html#a0f991115c3acd94289d532b604a185c5">gestion_stat</a></div><div class="ttdeci">void gestion_stat(int *stat, int valeur)</div><div class="ttdoc">boost une stat</div><div class="ttdef"><b>Definition:</b> personnage.c:60</div></div>
+<div class="ttc" id="apersonnage_8h_html_a4d16499f1c796e0a1c52f341d5fc6d13"><div class="ttname"><a href="personnage_8h.html#a4d16499f1c796e0a1c52f341d5fc6d13">destruction_personnage</a></div><div class="ttdeci">void destruction_personnage(personnage_t **pers)</div><div class="ttdoc">destruction d'un personnage</div><div class="ttdef"><b>Definition:</b> personnage.c:138</div></div>
+<div class="ttc" id="apersonnage_8h_html_a59eb894a7f99ef1eb3d7f491bd2563c0"><div class="ttname"><a href="personnage_8h.html#a59eb894a7f99ef1eb3d7f491bd2563c0">affiche_personnage</a></div><div class="ttdeci">void affiche_personnage(personnage_t *pers)</div><div class="ttdoc">Affiche les states d'un personnage.</div><div class="ttdef"><b>Definition:</b> personnage.c:23</div></div>
+<div class="ttc" id="apersonnage_8h_html_a5f9c7b97e91850a0808d2eb759e1c77d"><div class="ttname"><a href="personnage_8h.html#a5f9c7b97e91850a0808d2eb759e1c77d">charger_base</a></div><div class="ttdeci">void charger_base(personnage_t *pers, char *nomDossier)</div><div class="ttdoc">charge une base de stat</div><div class="ttdef"><b>Definition:</b> personnage.c:70</div></div>
+<div class="ttc" id="apersonnage_8h_html_a66d93b3a6c9ca5cd769608068dd9c4b5"><div class="ttname"><a href="personnage_8h.html#a66d93b3a6c9ca5cd769608068dd9c4b5">affiche_direction</a></div><div class="ttdeci">void affiche_direction(direction_t dir)</div><div class="ttdoc">Affiche la direction.</div><div class="ttdef"><b>Definition:</b> personnage.c:40</div></div>
+<div class="ttc" id="apersonnage_8h_html_a6f9bf940d2ac7beb72fa35956e5901f7"><div class="ttname"><a href="personnage_8h.html#a6f9bf940d2ac7beb72fa35956e5901f7">sauvegarder_base</a></div><div class="ttdeci">void sauvegarder_base(personnage_t *pers, char *nomDossier)</div><div class="ttdoc">sauvegarde une base de stat</div><div class="ttdef"><b>Definition:</b> personnage.c:114</div></div>
+<div class="ttc" id="apersonnage_8h_html_aa9aabf24ef46feff65320960721536e6"><div class="ttname"><a href="personnage_8h.html#aa9aabf24ef46feff65320960721536e6">direction_s</a></div><div class="ttdeci">direction_s</div><div class="ttdoc">Pour obtenir la direction de chaque personnage, là où il regarde.</div><div class="ttdef"><b>Definition:</b> personnage.h:23</div></div>
+<div class="ttc" id="astructcoordonnees__s_html"><div class="ttname"><a href="structcoordonnees__s.html">coordonnees_s</a></div><div class="ttdoc">Structure pour les coordonnées.</div><div class="ttdef"><b>Definition:</b> coordonnees.h:17</div></div>
+<div class="ttc" id="astructpersonnage__s_html"><div class="ttname"><a href="structpersonnage__s.html">personnage_s</a></div><div class="ttdoc">Structure pour chaque personnage.</div><div class="ttdef"><b>Definition:</b> personnage.h:30</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a00134b9099abbe6b8e87e75d1bc59cf5"><div class="ttname"><a href="structpersonnage__s.html#a00134b9099abbe6b8e87e75d1bc59cf5">personnage_s::direction</a></div><div class="ttdeci">direction_t direction</div><div class="ttdoc">valeur de sa direction</div><div class="ttdef"><b>Definition:</b> personnage.h:38</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a18ebf3e3153619aa484739070e0d4021"><div class="ttname"><a href="structpersonnage__s.html#a18ebf3e3153619aa484739070e0d4021">personnage_s::degats</a></div><div class="ttdeci">int degats</div><div class="ttdoc">valeur de ses dégâts</div><div class="ttdef"><b>Definition:</b> personnage.h:33</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a1adc71aec3e735adb623d543d25dcd1b"><div class="ttname"><a href="structpersonnage__s.html#a1adc71aec3e735adb623d543d25dcd1b">personnage_s::vie</a></div><div class="ttdeci">int vie</div><div class="ttdoc">valeur de sa vie</div><div class="ttdef"><b>Definition:</b> personnage.h:32</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a608710a15fa5b89eebfc67a85864a32e"><div class="ttname"><a href="structpersonnage__s.html#a608710a15fa5b89eebfc67a85864a32e">personnage_s::vitesse_d</a></div><div class="ttdeci">int vitesse_d</div><div class="ttdoc">valeur de sa vitesse de déplacement</div><div class="ttdef"><b>Definition:</b> personnage.h:34</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a79d6819e210b4b2106d0930597820632"><div class="ttname"><a href="structpersonnage__s.html#a79d6819e210b4b2106d0930597820632">personnage_s::defense</a></div><div class="ttdeci">int defense</div><div class="ttdoc">valeur de sa défense</div><div class="ttdef"><b>Definition:</b> personnage.h:36</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a870a2430756f04298910a728e32c476d"><div class="ttname"><a href="structpersonnage__s.html#a870a2430756f04298910a728e32c476d">personnage_s::saut</a></div><div class="ttdeci">int saut</div><div class="ttdoc">valeur de sa hauteur de saut</div><div class="ttdef"><b>Definition:</b> personnage.h:37</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a8d197cd7e2cf68298acfb7e1b08cf0a9"><div class="ttname"><a href="structpersonnage__s.html#a8d197cd7e2cf68298acfb7e1b08cf0a9">personnage_s::coord</a></div><div class="ttdeci">coordonnees_t coord</div><div class="ttdoc">valeur de ses coordonnées</div><div class="ttdef"><b>Definition:</b> personnage.h:39</div></div>
+<div class="ttc" id="astructpersonnage__s_html_a94b5cf3f5c47f9de3b046ebdec525a19"><div class="ttname"><a href="structpersonnage__s.html#a94b5cf3f5c47f9de3b046ebdec525a19">personnage_s::vitesse_a</a></div><div class="ttdeci">int vitesse_a</div><div class="ttdoc">valeur de sa vitesse d'attaque</div><div class="ttdef"><b>Definition:</b> personnage.h:35</div></div>
+<div class="ttc" id="astructpersonnage__s_html_ac0fc9fa7fa00b5d1e1ba1ad3a424cef3"><div class="ttname"><a href="structpersonnage__s.html#ac0fc9fa7fa00b5d1e1ba1ad3a424cef3">personnage_s::nom</a></div><div class="ttdeci">char * nom</div><div class="ttdoc">nom du peronnage</div><div class="ttdef"><b>Definition:</b> personnage.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

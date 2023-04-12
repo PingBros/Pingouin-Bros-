@@ -1,0 +1,9 @@
+Nom=Chasseur
+Vie=200
+Degats=5
+Vitesse_d=30
+Vitesse_a=20
+Defense=5
+Saut=2
+Direction=0
+X=15 Y=10

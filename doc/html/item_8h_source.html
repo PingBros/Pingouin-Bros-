@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjetDocu_Pingouin_Bros:  Fichier source de lib/item.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjetDocu_Pingouin_Bros
+   </div>
+   <div id="projectbrief">Documentation des programmes du jeu Pingouin Bros</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">item.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="item_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COORDONNEES_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COORDONNEES_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coordonnees_8h.html">coordonnees.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define MAXCAR 100</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structitem__s.html">   22</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structitem__s.html">item_s</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">char</span> * nom;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> boost[6];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="structcoordonnees__s.html">coordonnees_t</a> coord;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;} <a class="code" href="structitem__s.html">item_t</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="item_8h.html#aacfd838aca9631c8794af864e273e7af">affiche_item</a>(<a class="code" href="structitem__s.html">item_t</a> * item);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <a class="code" href="structitem__s.html">item_t</a> * <a class="code" href="item_8h.html#adf1b0b4c16d3b52d89b7c82dc78eb7ee">creation_item</a>(<span class="keywordtype">char</span> * nom, <span class="keywordtype">int</span> vie, <span class="keywordtype">int</span> degats, <span class="keywordtype">int</span> vitesse_d, <span class="keywordtype">int</span> vitesse_a, <span class="keywordtype">int</span> defense, <span class="keywordtype">int</span> saut);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="item_8h.html#ab7ab8b3c004eed44d2989dfe09fec7a5">destruction_item</a>(<a class="code" href="structitem__s.html">item_t</a> ** item);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="item_8h.html#ad931b1d621a23b3901cb3ea3e87c42ca">sauvegarder_item</a>(<a class="code" href="structitem__s.html">item_t</a> *item, <span class="keywordtype">char</span> *nomDossier);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="item_8h.html#add9ce178402984d06d3197701a6485e1">charger_item</a>(<a class="code" href="structitem__s.html">item_t</a> *item,<span class="keywordtype">char</span> * nomDossier);</div>
+<div class="ttc" id="acoordonnees_8h_html"><div class="ttname"><a href="coordonnees_8h.html">coordonnees.h</a></div><div class="ttdoc">Fichier pour la structure coordonnees.</div></div>
+<div class="ttc" id="aitem_8h_html_aacfd838aca9631c8794af864e273e7af"><div class="ttname"><a href="item_8h.html#aacfd838aca9631c8794af864e273e7af">affiche_item</a></div><div class="ttdeci">void affiche_item(item_t *item)</div><div class="ttdoc">Fonction d'affichage du nom, des coordonnées et des améliorations que procure un item.</div><div class="ttdef"><b>Definition:</b> item.c:24</div></div>
+<div class="ttc" id="aitem_8h_html_ab7ab8b3c004eed44d2989dfe09fec7a5"><div class="ttname"><a href="item_8h.html#ab7ab8b3c004eed44d2989dfe09fec7a5">destruction_item</a></div><div class="ttdeci">void destruction_item(item_t **item)</div><div class="ttdoc">Fonction de destruction d'un item.</div><div class="ttdef"><b>Definition:</b> item.c:88</div></div>
+<div class="ttc" id="aitem_8h_html_ad931b1d621a23b3901cb3ea3e87c42ca"><div class="ttname"><a href="item_8h.html#ad931b1d621a23b3901cb3ea3e87c42ca">sauvegarder_item</a></div><div class="ttdeci">void sauvegarder_item(item_t *item, char *nomDossier)</div><div class="ttdoc">sauvegarde un item</div><div class="ttdef"><b>Definition:</b> item.c:121</div></div>
+<div class="ttc" id="aitem_8h_html_add9ce178402984d06d3197701a6485e1"><div class="ttname"><a href="item_8h.html#add9ce178402984d06d3197701a6485e1">charger_item</a></div><div class="ttdeci">void charger_item(item_t *item, char *nomDossier)</div><div class="ttdoc">charge un item</div><div class="ttdef"><b>Definition:</b> item.c:100</div></div>
+<div class="ttc" id="aitem_8h_html_adf1b0b4c16d3b52d89b7c82dc78eb7ee"><div class="ttname"><a href="item_8h.html#adf1b0b4c16d3b52d89b7c82dc78eb7ee">creation_item</a></div><div class="ttdeci">item_t * creation_item(char *nom, int vie, int degats, int vitesse_d, int vitesse_a, int defense, int saut)</div><div class="ttdoc">Fonction de création du nom et des améliorations que procure un item.</div><div class="ttdef"><b>Definition:</b> item.c:67</div></div>
+<div class="ttc" id="astructcoordonnees__s_html"><div class="ttname"><a href="structcoordonnees__s.html">coordonnees_s</a></div><div class="ttdoc">Structure pour les coordonnées.</div><div class="ttdef"><b>Definition:</b> coordonnees.h:17</div></div>
+<div class="ttc" id="astructitem__s_html"><div class="ttname"><a href="structitem__s.html">item_s</a></div><div class="ttdoc">Structure pour un item.</div><div class="ttdef"><b>Definition:</b> item.h:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

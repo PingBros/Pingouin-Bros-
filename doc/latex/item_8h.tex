@@ -1,0 +1,157 @@
+\hypertarget{item_8h}{}\doxysection{Référence du fichier lib/item.h}
+\label{item_8h}\index{lib/item.h@{lib/item.h}}
+
+
+Fichier pour la structure item.  
+
+
+{\ttfamily \#include \char`\"{}coordonnees.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitem__s}{item\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Structure pour un item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item_8h_a738887643e2a12f694d8a37b1ff95839}\label{item_8h_a738887643e2a12f694d8a37b1ff95839}} 
+\#define {\bfseries MAXCAR}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{item_8h_a39fa0e97dea0645c57b7e7b0d0014ac4}\label{item_8h_a39fa0e97dea0645c57b7e7b0d0014ac4}} 
+typedef struct \mbox{\hyperlink{structitem__s}{item\+\_\+s}} {\bfseries item\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{item_8h_aacfd838aca9631c8794af864e273e7af}{affiche\+\_\+item}} (\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}affichage du nom, des coordonnées et des améliorations que procure un item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$ \mbox{\hyperlink{item_8h_adf1b0b4c16d3b52d89b7c82dc78eb7ee}{creation\+\_\+item}} (char $\ast$nom, int vie, int degats, int vitesse\+\_\+d, int vitesse\+\_\+a, int defense, int saut)
+\begin{DoxyCompactList}\small\item\em Fonction de création du nom et des améliorations que procure un item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_ab7ab8b3c004eed44d2989dfe09fec7a5}{destruction\+\_\+item}} (\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$$\ast$item)
+\begin{DoxyCompactList}\small\item\em Fonction de destruction d\textquotesingle{}un item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_ad931b1d621a23b3901cb3ea3e87c42ca}{sauvegarder\+\_\+item}} (\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$item, char $\ast$nom\+Dossier)
+\begin{DoxyCompactList}\small\item\em sauvegarde un item \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{item_8h_add9ce178402984d06d3197701a6485e1}{charger\+\_\+item}} (\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$item, char $\ast$nom\+Dossier)
+\begin{DoxyCompactList}\small\item\em charge un item \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier pour la structure item. 
+
+\begin{DoxyAuthor}{Auteur}
+Antoine Teissier \& Lucas Barbet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9 Février 2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{item_8h_aacfd838aca9631c8794af864e273e7af}\label{item_8h_aacfd838aca9631c8794af864e273e7af}} 
+\index{item.h@{item.h}!affiche\_item@{affiche\_item}}
+\index{affiche\_item@{affiche\_item}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{affiche\_item()}{affiche\_item()}}
+{\footnotesize\ttfamily void affiche\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}affichage du nom, des coordonnées et des améliorations que procure un item. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em item} & structure item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_add9ce178402984d06d3197701a6485e1}\label{item_8h_add9ce178402984d06d3197701a6485e1}} 
+\index{item.h@{item.h}!charger\_item@{charger\_item}}
+\index{charger\_item@{charger\_item}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{charger\_item()}{charger\_item()}}
+{\footnotesize\ttfamily void charger\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$}]{item,  }\item[{char $\ast$}]{nom\+Dossier }\end{DoxyParamCaption})}
+
+
+
+charge un item 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em item} & l\textquotesingle{}item où il faut stocker les states \\
+\hline
+{\em nom\+Dossier} & nom\+Dossier chemin vers le fichier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{item_8h_adf1b0b4c16d3b52d89b7c82dc78eb7ee}\label{item_8h_adf1b0b4c16d3b52d89b7c82dc78eb7ee}} 
+\index{item.h@{item.h}!creation\_item@{creation\_item}}
+\index{creation\_item@{creation\_item}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{creation\_item()}{creation\_item()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$ creation\+\_\+item (\begin{DoxyParamCaption}\item[{char $\ast$}]{nom,  }\item[{int}]{vie,  }\item[{int}]{degats,  }\item[{int}]{vitesse\+\_\+d,  }\item[{int}]{vitesse\+\_\+a,  }\item[{int}]{defense,  }\item[{int}]{saut }\end{DoxyParamCaption})}
+
+
+
+Fonction de création du nom et des améliorations que procure un item. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom} & le nom de l\textquotesingle{}item \\
+\hline
+{\em vie} & la vie ajoutée / enlevée \\
+\hline
+{\em degats} & les dégâts ajoutés / enlevés \\
+\hline
+{\em vitesse\+\_\+d} & la vitesse de déplacement ajoutée / enlevée \\
+\hline
+{\em vitesse\+\_\+a} & la vitesse d\textquotesingle{}attaque ajoutée / enlevée \\
+\hline
+{\em defense} & la défense ajoutée / enlevée \\
+\hline
+{\em saut} & la hauteur de saut ajoutée / enlevée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_ab7ab8b3c004eed44d2989dfe09fec7a5}\label{item_8h_ab7ab8b3c004eed44d2989dfe09fec7a5}} 
+\index{item.h@{item.h}!destruction\_item@{destruction\_item}}
+\index{destruction\_item@{destruction\_item}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{destruction\_item()}{destruction\_item()}}
+{\footnotesize\ttfamily void destruction\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$$\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Fonction de destruction d\textquotesingle{}un item. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em item} & structure item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{item_8h_ad931b1d621a23b3901cb3ea3e87c42ca}\label{item_8h_ad931b1d621a23b3901cb3ea3e87c42ca}} 
+\index{item.h@{item.h}!sauvegarder\_item@{sauvegarder\_item}}
+\index{sauvegarder\_item@{sauvegarder\_item}!item.h@{item.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarder\_item()}{sauvegarder\_item()}}
+{\footnotesize\ttfamily void sauvegarder\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structitem__s}{item\+\_\+t}} $\ast$}]{item,  }\item[{char $\ast$}]{nom\+Dossier }\end{DoxyParamCaption})}
+
+
+
+sauvegarde un item 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em item} & l\textquotesingle{}item qu\textquotesingle{}il faut sauvegarder \\
+\hline
+{\em nom\+Dossier} & chemin vers le fichier \\
+\hline
+\end{DoxyParams}

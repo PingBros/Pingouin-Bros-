@@ -1,0 +1,85 @@
+
+/**
+ * \fn char*saisir_pseudo(SDL_renderer *renderer, TTF_Font *font)
+ * \brief Fonction qui permet de saisir un pseudo pour l'utilisateur dans le jeu
+ * \param SDL_renderer *renderer : rendu de l'interfac graphique ; TTF_Font *font : famille de police avec laquelle on écrit
+ */
+char *saisir_pseudo(SDL_Renderer *renderer, TTF_Font *font)
+{
+    // Création d'une chaîne de caractères vide
+    char *pseudo = calloc(1, sizeof(char));
+
+    // Création de la texture de fond du champ de texte
+    SDL_Surface *surface_fond = SDL_CreateRGBSurface(0, 300, 40, 32, 0, 0, 0, 0);
+    SDL_FillRect(surface_fond, NULL, SDL_MapRGB(surface_fond->format, 255, 255, 255));
+    SDL_Texture *texture_fond = SDL_CreateTextureFromSurface(renderer, surface_fond);
+    SDL_Rect rect_fond = {100, 100, 300, 40};
+    SDL_FreeSurface(surface_fond);
+
+    // Création de la texture du texte du champ de texte
+    SDL_Surface *surface_texte = NULL;
+    SDL_Texture *texture_texte = NULL;
+    SDL_Rect rect_texte = {0, 0, 0, 0};
+
+    // Configuration du champ de texte pour la saisie du pseudo
+    SDL_StartTextInput();
+    int saisie_terminee = FALSE;
+    while (!saisie_terminee)
+    {
+        SDL_Event event;
+        while (SDL_PollEvent(&event))
+        {
+            switch (event.type)
+            {
+            case SDL_QUIT:
+                // L'utilisateur a cliqué sur la croix en haut à droite de la fenêtre
+                SDL_StopTextInput();
+                SDL_DestroyTexture(texture_fond);
+                free(pseudo);
+                return NULL;
+            case SDL_KEYDOWN:
+                // L'utilisateur a appuyé sur une touche du clavier
+                if (event.key.keysym.sym == SDLK_BACKSPACE && strlen(pseudo) > 0)
+                {
+                    // Effacement du dernier caractère saisi
+                    pseudo[strlen(pseudo) - 1] = '\0';
+                    // Mise à jour de la texture du texte du champ de texte
+                    SDL_DestroyTexture(texture_texte);
+                    surface_texte = TTF_RenderText_Solid(font, pseudo, (SDL_Color){0, 0, 0, 255});
+                    texture_texte = SDL_CreateTextureFromSurface(renderer, surface_texte);
+                    SDL_FreeSurface(surface_texte);
+                    SDL_QueryTexture(texture_texte, NULL, NULL, &rect_texte.w, &rect_texte.h);
+                }
+                else if (event.key.keysym.sym == SDLK_RETURN)
+                {
+                    // Fin de la saisie
+                    saisie_terminee = TRUE;
+                }
+                break;
+            case SDL_TEXTINPUT:
+                // L'utilisateur a saisi un caractère au clavier
+                strcat(pseudo, event.text.text);
+                // Mise à jour de la texture du texte du champ de texte
+                SDL_DestroyTexture(texture_texte);
+                surface_texte = TTF_RenderText_Solid(font, pseudo, (SDL_Color){0, 0, 0, 255});
+                texture_texte = SDL_CreateTextureFromSurface(renderer, surface_texte);
+                SDL_FreeSurface(surface_texte);
+                SDL_QueryTexture(texture_texte, NULL, NULL, &rect_texte.w, &rect_texte.h);
+                break;
+            }
+        }
+
+        // Affichage de la fenêtre de saisie du pseudo
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, texture_fond, NULL, &rect_fond);
+        SDL_RenderCopy(renderer, texture_texte, NULL, &rect_texte);
+        SDL_RenderPresent(renderer);
+    }
+    SDL_StopTextInput();
+    SDL_DestroyTexture(texture_fond);
+    SDL_DestroyTexture(texture_texte);
+
+    // Retourne la chaîne de caractères saisie
+    return pseudo;
+}

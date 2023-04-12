@@ -44,7 +44,7 @@ void afficher_pingouin(pingouin_t *ping) {
  */
 void creation_pingouin(pingouin_t *ping, char *nomDossier, char *pseudo) {
   ping->pers = malloc(sizeof(personnage_t));
-  charger_base(ping->pers, "../src/stat/joueur.txt"); // chargement d'une base qui ne change jamais
+  charger_base(ping->pers, "../src/fich_txt/joueur.txt"); // chargement d'une base qui ne change jamais
   item_t *mains = creation_item("mains", 0, 0, 0, 0, 0, 0);
   ping->pers->nom = realloc(ping->pers->nom, strlen(pseudo) * sizeof(char) + 1);
   strcpy(ping->pers->nom, pseudo);
@@ -68,39 +68,46 @@ void creation_pingouin(pingouin_t *ping, char *nomDossier, char *pseudo) {
  * \return void.
  */
 void charger_ping(pingouin_t *ping, char *nomDossier, char *pseudo,item_t *listeG[3], int nbItemG) {
- FILE *data_pers = fopen("../src/stat/ping.txt", "r");
- char nom[MAXCAR];
- char chemin[MAXCAR];
- int nb;
- char item[MAXCAR];
+  FILE *data_pers = fopen("../src/fich_txt/ping.txt", "r");
+  char nom[MAXCAR];
+  char chemin[MAXCAR];
+  int nb;
+  char item[MAXCAR];
 
- if ((data_pers != NULL) && ((feof(data_pers)))) {
-   ping->pers = malloc(sizeof(personnage_t));
-   item_t *mains = creation_item("mains", 0, 0, 0, 0, 0, 0);
-   ping->liste[0] = mains;
-   ping->nb_item = 1;
-   ping->liste[0]->coord.x = 0;
-   ping->liste[0]->coord.y = 0;
-   if (!(feof(data_pers))) {
-     fscanf(data_pers, "Pseudo=%s\n", nom);
-     fscanf(data_pers, "Chemin_Stat_Joueur=%s\n", chemin);
-     fscanf(data_pers, "NombreItem=%i\n", &nb);
-     for (int i = 1; i < nb + 1; i++) {
-       fscanf(data_pers, "Nom=%s\n", item);
-       for (int j = 0; j < nbItemG; j++) {
-         if (strcmp(item, listeG[j]->nom) == 0) {
-           ping->liste[i] = listeG[j];
-         }
-       }
-     }
-     charger_base(ping->pers, chemin);
-     ping->cheminStatJoueur = malloc(strlen(chemin) * sizeof(char) + 1);
-     strcpy(ping->cheminStatJoueur, chemin);
-     ping->nb_item += nb;
-   }
- }else{
-   creation_pingouin(ping, nomDossier, pseudo);
- }
+  if ((data_pers != NULL) && ((feof(data_pers))))
+  {
+    ping->pers = malloc(sizeof(personnage_t));
+    item_t *mains = creation_item("mains", 0, 0, 0, 0, 0, 0);
+    ping->liste[0] = mains;
+    ping->nb_item = 1;
+    ping->liste[0]->coord.x = 0;
+    ping->liste[0]->coord.y = 0;
+    if (!(feof(data_pers)))
+    {
+      fscanf(data_pers, "Pseudo=%s\n", nom);
+      fscanf(data_pers, "Chemin_Stat_Joueur=%s\n", chemin);
+      fscanf(data_pers, "NombreItem=%i\n", &nb);
+      for (int i = 1; i < nb + 1; i++)
+      {
+        fscanf(data_pers, "Nom=%s\n", item);
+        for (int j = 0; j < nbItemG; j++)
+        {
+          if (strcmp(item, listeG[j]->nom) == 0)
+          {
+            ping->liste[i] = listeG[j];
+          }
+        }
+      }
+      charger_base(ping->pers, chemin);
+      ping->cheminStatJoueur = malloc(strlen(chemin) * sizeof(char) + 1);
+      strcpy(ping->cheminStatJoueur, chemin);
+      ping->nb_item += nb;
+    }
+  }
+  else
+  {
+    creation_pingouin(ping, nomDossier, pseudo);
+  }
  if(ping->pers->vie==0){
    creation_pingouin(ping, nomDossier, pseudo);
  }
@@ -114,20 +121,23 @@ void charger_ping(pingouin_t *ping, char *nomDossier, char *pseudo,item_t *liste
  * \param ping joueur que l'on veut sauvegarder
  */
 void sauvegarder_ping(pingouin_t *ping) {
-  FILE *data_pers = fopen("../src/stat/ping.txt", "w");
-  sauvegarder_base(ping->pers, ping->cheminStatJoueur);
-  if (data_pers != NULL) {
-    if (!(feof(data_pers))) {
+ FILE *data_pers = fopen("../src/fich_txt/ping.txt", "w");
+ sauvegarder_base(ping->pers, ping->cheminStatJoueur);
+ if (data_pers != NULL)
+ {
+   if (!(feof(data_pers)))
+   {
       fprintf(data_pers, "Pseudo=%s\n", ping->pers->nom);
       fprintf(data_pers, "Chemin_Stat_Joueur=%s\n", ping->cheminStatJoueur);
 
       fprintf(data_pers, "NombreItem=%i\n", ping->nb_item - 1);
-      
-      for (int i = 1; i <ping->nb_item; i++) {
+
+      for (int i = 1; i < ping->nb_item; i++)
+      {
         fprintf(data_pers, "Nom=%s\n", ping->liste[i]->nom);
       }
-    }
-  }
+   }
+ }
   fclose(data_pers);
 }
 
@@ -252,7 +262,8 @@ void supprimer_item(pingouin_t *ping, item_t *item) {
  * \param ping structure pingouin
  * \return void.
  */
-void destruction_pingouin(pingouin_t **ping) {
+extern void destruction_pingouin(pingouin_t **ping)
+{
   int i;
   destruction_personnage(&((*ping)->pers));
   for (i = 0; i < (*ping)->nb_item; i++) {
@@ -261,4 +272,13 @@ void destruction_pingouin(pingouin_t **ping) {
   free((*ping)->cheminStatJoueur);
   free(*ping);
   (*ping) = NULL;
+}
+
+
+extern void calcul_degats(personnage_t *p1, personnage_t *p2){
+    p2->vie -= p1->degats * (1 - (p2->defense / 100));
+}
+
+extern int vivant(personnage_t * pers){
+    return pers->vie > 0;
 }

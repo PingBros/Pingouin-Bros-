@@ -1,0 +1,185 @@
+\hypertarget{interface__graphique_8h}{}\doxysection{Référence du fichier lib/interface\+\_\+graphique.h}
+\label{interface__graphique_8h}\index{lib/interface\_graphique.h@{lib/interface\_graphique.h}}
+
+
+Librairie avec les bibliothèques, constantes et prototypes de fonctions nécessaire à l\textquotesingle{}interface graphique.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmap__s}{map\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Structure pour la génération de la map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a12491bd8cdbac2730ce9ba1505844b23}\label{interface__graphique_8h_a12491bd8cdbac2730ce9ba1505844b23}} 
+\#define {\bfseries LARGEUR\+\_\+\+TILE}~24
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a0db79c057d77ec76d8423b9b2c88c476}\label{interface__graphique_8h_a0db79c057d77ec76d8423b9b2c88c476}} 
+\#define {\bfseries HAUTEUR\+\_\+\+TILE}~16
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a29fd18bed01c4d836c7ebfe73a125c3f}\label{interface__graphique_8h_a29fd18bed01c4d836c7ebfe73a125c3f}} 
+\#define {\bfseries END}~50
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_aca6a32b1663668330f9bd7bb521a200f}\label{interface__graphique_8h_aca6a32b1663668330f9bd7bb521a200f}} 
+\#define {\bfseries NOMBRE\+\_\+\+BLOCS\+\_\+\+LARGEUR}~15
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a789df0669b9be7839c687d0a83069dbb}\label{interface__graphique_8h_a789df0669b9be7839c687d0a83069dbb}} 
+\#define {\bfseries NOMBRE\+\_\+\+BLOCS\+\_\+\+HAUTEUR}~13
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a500777420e964ec8b89973bcbba1e48e}\label{interface__graphique_8h_a500777420e964ec8b89973bcbba1e48e}} 
+\#define {\bfseries MAXCAR\+\_\+\+MAP}~500
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{interface__graphique_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\#define {\bfseries TRUE}~1
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{interface__graphique_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
+\#define {\bfseries FALSE}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_ae80c6c8b9f9e5f88c65337bb1cd2eb65}\label{interface__graphique_8h_ae80c6c8b9f9e5f88c65337bb1cd2eb65}} 
+typedef struct \mbox{\hyperlink{structmap__s}{map\+\_\+s}} {\bfseries map\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface__graphique_8h_a92a37805b71fc17686fb54e65ec0b0bc}{charger\+\_\+map}} (\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$carte, char $\ast$chemin)
+\begin{DoxyCompactList}\small\item\em Fonction de chargement pour la map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface__graphique_8h_acdce572ab273831114e3e4de67e1abac}\label{interface__graphique_8h_acdce572ab273831114e3e4de67e1abac}} 
+void {\bfseries seconde\+\_\+map} (\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$map, char $\ast$s\+\_\+map\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a146a8367f6eb27dbe22a7dc5e8144ee0}\label{interface__graphique_8h_a146a8367f6eb27dbe22a7dc5e8144ee0}} 
+void {\bfseries Afficher} (SDL\+\_\+\+Renderer $\ast$renderer, SDL\+\_\+\+Texture $\ast$tileset, \mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$map, SDL\+\_\+\+Texture $\ast$perso, SDL\+\_\+\+Texture $\ast$home\+\_\+texture, int deb, int fin)
+\item 
+\mbox{\Hypertarget{interface__graphique_8h_a82bec0e1cbde8c596c089e22096c2092}\label{interface__graphique_8h_a82bec0e1cbde8c596c089e22096c2092}} 
+int {\bfseries menu\+\_\+principal} ()
+\item 
+int \mbox{\hyperlink{interface__graphique_8h_afdf33ef6507a8d51e0ab5210ce727466}{jeu}} ()
+\begin{DoxyCompactList}\small\item\em Fonction génère la map du jeu et permet de jouer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface__graphique_8h_abf242ff17d946e137012b0cc25370b66}{detect\+\_\+obstacle}} (\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$map)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte les obstacles sur la map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface__graphique_8h_a35a12c24dc189629358813e679f834da}{deplacements}} (\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$map, int avancer, int reculer, int sauter)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de réaliser les déplacements en fonction de la / des touche(s) que l\textquotesingle{}on presse. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface__graphique_8h_afbbbc30e73d9515c6b39fb2eba5444eb}{detect\+Collision}} (SDL\+\_\+\+Rect rect1, SDL\+\_\+\+Rect rect2)
+\begin{DoxyCompactList}\small\item\em Fonction qui détecte les collisions entre 2 rectangles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Librairie avec les bibliothèques, constantes et prototypes de fonctions nécessaire à l\textquotesingle{}interface graphique. 
+
+\begin{DoxyAuthor}{Auteur}
+Chevallier Hugo et Patault Kylian 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+9 Avril 2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{interface__graphique_8h_a92a37805b71fc17686fb54e65ec0b0bc}\label{interface__graphique_8h_a92a37805b71fc17686fb54e65ec0b0bc}} 
+\index{interface\_graphique.h@{interface\_graphique.h}!charger\_map@{charger\_map}}
+\index{charger\_map@{charger\_map}!interface\_graphique.h@{interface\_graphique.h}}
+\doxysubsubsection{\texorpdfstring{charger\_map()}{charger\_map()}}
+{\footnotesize\ttfamily void charger\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$}]{carte,  }\item[{char $\ast$}]{chemin }\end{DoxyParamCaption})}
+
+
+
+Fonction de chargement pour la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em carte} & Carte de type map\+\_\+t \\
+\hline
+{\em chemin} & Chemin pour accéder au fichier .txt pour générer la carte\\
+\hline
+{\em renderer} & rendu du jeu pour afficher tous les éléments \\
+\hline
+{\em tileset} & texture qui permet d\textquotesingle{}afficher la map en fonction de la map \\
+\hline
+{\em map} & map de type map\+\_\+t \\
+\hline
+{\em perso} & texture permettant de représenter le personnage (ici un pingouin) \\
+\hline
+{\em home\+\_\+texture} & texture du bouton Home pour l\textquotesingle{}afficher sur la fenêtre \\
+\hline
+{\em deb} & indice de début pour avancer au fur et à mesure \\
+\hline
+{\em fin} & indice de fin pour avancer, donc on affiche la map de 50 en 50 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface__graphique_8h_a35a12c24dc189629358813e679f834da}\label{interface__graphique_8h_a35a12c24dc189629358813e679f834da}} 
+\index{interface\_graphique.h@{interface\_graphique.h}!deplacements@{deplacements}}
+\index{deplacements@{deplacements}!interface\_graphique.h@{interface\_graphique.h}}
+\doxysubsubsection{\texorpdfstring{deplacements()}{deplacements()}}
+{\footnotesize\ttfamily void deplacements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$}]{map,  }\item[{int}]{avancer,  }\item[{int}]{reculer,  }\item[{int}]{sauter }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de réaliser les déplacements en fonction de la / des touche(s) que l\textquotesingle{}on presse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em map} & map de type map\+\_\+t \\
+\hline
+{\em avancer} & valeur \+: TRUE ou FALSE si on avance ou pas \\
+\hline
+{\em reculer} & valeur \+: TRUE ou FALSE si on recule ou pas \\
+\hline
+{\em sauter} & valeur \+: TRUE ou FALSE si on saute ou pas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface__graphique_8h_abf242ff17d946e137012b0cc25370b66}\label{interface__graphique_8h_abf242ff17d946e137012b0cc25370b66}} 
+\index{interface\_graphique.h@{interface\_graphique.h}!detect\_obstacle@{detect\_obstacle}}
+\index{detect\_obstacle@{detect\_obstacle}!interface\_graphique.h@{interface\_graphique.h}}
+\doxysubsubsection{\texorpdfstring{detect\_obstacle()}{detect\_obstacle()}}
+{\footnotesize\ttfamily int detect\+\_\+obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$}]{map }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte les obstacles sur la map. 
+
+\begin{DoxyReturn}{Renvoie}
+la valeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface__graphique_8h_afbbbc30e73d9515c6b39fb2eba5444eb}\label{interface__graphique_8h_afbbbc30e73d9515c6b39fb2eba5444eb}} 
+\index{interface\_graphique.h@{interface\_graphique.h}!detectCollision@{detectCollision}}
+\index{detectCollision@{detectCollision}!interface\_graphique.h@{interface\_graphique.h}}
+\doxysubsubsection{\texorpdfstring{detectCollision()}{detectCollision()}}
+{\footnotesize\ttfamily int detect\+Collision (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Rect}]{rect1,  }\item[{SDL\+\_\+\+Rect}]{rect2 }\end{DoxyParamCaption})}
+
+
+
+Fonction qui détecte les collisions entre 2 rectangles. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em rect1} & rectangle SDL\+\_\+\+Rect \\
+\hline
+{\em rect2} & rectangle SDL\+\_\+\+Rect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si pas de collision, 1 si collision 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface__graphique_8h_afdf33ef6507a8d51e0ab5210ce727466}\label{interface__graphique_8h_afdf33ef6507a8d51e0ab5210ce727466}} 
+\index{interface\_graphique.h@{interface\_graphique.h}!jeu@{jeu}}
+\index{jeu@{jeu}!interface\_graphique.h@{interface\_graphique.h}}
+\doxysubsubsection{\texorpdfstring{jeu()}{jeu()}}
+{\footnotesize\ttfamily int jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction génère la map du jeu et permet de jouer. 
+
+\begin{DoxyReturn}{Renvoie}
+Si on a cliqué sur le bouton \char`\"{}\+Home\char`\"{} pour revenir au menu, et FALSE si un des éléments c\textquotesingle{}est mal chargé 
+\end{DoxyReturn}

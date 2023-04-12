@@ -21,7 +21,7 @@ INCLUDES = -I${SDLINC_DIR}
 LIBS = -L${SDLLIB_DIR} -lSDL2 -lSDL2_ttf -lSDL2_image -lm
 
 # The final executable name
-EXEC = menu_final
+EXEC = pingouin_bros
 
 # Create the directories for object files and executables
 $(OBJDIR):

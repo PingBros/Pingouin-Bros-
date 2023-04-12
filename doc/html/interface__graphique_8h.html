@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjetDocu_Pingouin_Bros: Référence du fichier lib/interface_graphique.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ProjetDocu_Pingouin_Bros
+   </div>
+   <div id="projectbrief">Documentation des programmes du jeu Pingouin Bros</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier interface_graphique.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Librairie avec les bibliothèques, constantes et prototypes de fonctions nécessaire à l'interface graphique.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL_image.h&gt;</code><br />
+</div>
+<p><a href="interface__graphique_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmap__s.html">map_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure pour la génération de la map.  <a href="structmap__s.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a12491bd8cdbac2730ce9ba1505844b23"><td class="memItemLeft" align="right" valign="top"><a id="a12491bd8cdbac2730ce9ba1505844b23"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LARGEUR_TILE</b>&#160;&#160;&#160;24</td></tr>
+<tr class="separator:a12491bd8cdbac2730ce9ba1505844b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db79c057d77ec76d8423b9b2c88c476"><td class="memItemLeft" align="right" valign="top"><a id="a0db79c057d77ec76d8423b9b2c88c476"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HAUTEUR_TILE</b>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a0db79c057d77ec76d8423b9b2c88c476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fd18bed01c4d836c7ebfe73a125c3f"><td class="memItemLeft" align="right" valign="top"><a id="a29fd18bed01c4d836c7ebfe73a125c3f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>END</b>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a29fd18bed01c4d836c7ebfe73a125c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6a32b1663668330f9bd7bb521a200f"><td class="memItemLeft" align="right" valign="top"><a id="aca6a32b1663668330f9bd7bb521a200f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOMBRE_BLOCS_LARGEUR</b>&#160;&#160;&#160;15</td></tr>
+<tr class="separator:aca6a32b1663668330f9bd7bb521a200f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789df0669b9be7839c687d0a83069dbb"><td class="memItemLeft" align="right" valign="top"><a id="a789df0669b9be7839c687d0a83069dbb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOMBRE_BLOCS_HAUTEUR</b>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:a789df0669b9be7839c687d0a83069dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500777420e964ec8b89973bcbba1e48e"><td class="memItemLeft" align="right" valign="top"><a id="a500777420e964ec8b89973bcbba1e48e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAXCAR_MAP</b>&#160;&#160;&#160;500</td></tr>
+<tr class="separator:a500777420e964ec8b89973bcbba1e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top"><a id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TRUE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top"><a id="aa93f0eb578d23995850d61f7d61c55c1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FALSE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ae80c6c8b9f9e5f88c65337bb1cd2eb65"><td class="memItemLeft" align="right" valign="top"><a id="ae80c6c8b9f9e5f88c65337bb1cd2eb65"></a>
+typedef struct <a class="el" href="structmap__s.html">map_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>map_t</b></td></tr>
+<tr class="separator:ae80c6c8b9f9e5f88c65337bb1cd2eb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a92a37805b71fc17686fb54e65ec0b0bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface__graphique_8h.html#a92a37805b71fc17686fb54e65ec0b0bc">charger_map</a> (<a class="el" href="structmap__s.html">map_t</a> *carte, char *chemin)</td></tr>
+<tr class="memdesc:a92a37805b71fc17686fb54e65ec0b0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de chargement pour la map.  <a href="interface__graphique_8h.html#a92a37805b71fc17686fb54e65ec0b0bc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a92a37805b71fc17686fb54e65ec0b0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdce572ab273831114e3e4de67e1abac"><td class="memItemLeft" align="right" valign="top"><a id="acdce572ab273831114e3e4de67e1abac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>seconde_map</b> (<a class="el" href="structmap__s.html">map_t</a> *map, char *s_map[])</td></tr>
+<tr class="separator:acdce572ab273831114e3e4de67e1abac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146a8367f6eb27dbe22a7dc5e8144ee0"><td class="memItemLeft" align="right" valign="top"><a id="a146a8367f6eb27dbe22a7dc5e8144ee0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Afficher</b> (SDL_Renderer *renderer, SDL_Texture *tileset, <a class="el" href="structmap__s.html">map_t</a> *map, SDL_Texture *perso, SDL_Texture *home_texture, int deb, int fin)</td></tr>
+<tr class="separator:a146a8367f6eb27dbe22a7dc5e8144ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bec0e1cbde8c596c089e22096c2092"><td class="memItemLeft" align="right" valign="top"><a id="a82bec0e1cbde8c596c089e22096c2092"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>menu_principal</b> ()</td></tr>
+<tr class="separator:a82bec0e1cbde8c596c089e22096c2092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf33ef6507a8d51e0ab5210ce727466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface__graphique_8h.html#afdf33ef6507a8d51e0ab5210ce727466">jeu</a> ()</td></tr>
+<tr class="memdesc:afdf33ef6507a8d51e0ab5210ce727466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction génère la map du jeu et permet de jouer.  <a href="interface__graphique_8h.html#afdf33ef6507a8d51e0ab5210ce727466">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afdf33ef6507a8d51e0ab5210ce727466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf242ff17d946e137012b0cc25370b66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface__graphique_8h.html#abf242ff17d946e137012b0cc25370b66">detect_obstacle</a> (<a class="el" href="structmap__s.html">map_t</a> *map)</td></tr>
+<tr class="memdesc:abf242ff17d946e137012b0cc25370b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui détecte les obstacles sur la map.  <a href="interface__graphique_8h.html#abf242ff17d946e137012b0cc25370b66">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abf242ff17d946e137012b0cc25370b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a12c24dc189629358813e679f834da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface__graphique_8h.html#a35a12c24dc189629358813e679f834da">deplacements</a> (<a class="el" href="structmap__s.html">map_t</a> *map, int avancer, int reculer, int sauter)</td></tr>
+<tr class="memdesc:a35a12c24dc189629358813e679f834da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet de réaliser les déplacements en fonction de la / des touche(s) que l'on presse.  <a href="interface__graphique_8h.html#a35a12c24dc189629358813e679f834da">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a35a12c24dc189629358813e679f834da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbbc30e73d9515c6b39fb2eba5444eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface__graphique_8h.html#afbbbc30e73d9515c6b39fb2eba5444eb">detectCollision</a> (SDL_Rect rect1, SDL_Rect rect2)</td></tr>
+<tr class="memdesc:afbbbc30e73d9515c6b39fb2eba5444eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui détecte les collisions entre 2 rectangles.  <a href="interface__graphique_8h.html#afbbbc30e73d9515c6b39fb2eba5444eb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afbbbc30e73d9515c6b39fb2eba5444eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p >Librairie avec les bibliothèques, constantes et prototypes de fonctions nécessaire à l'interface graphique. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Chevallier Hugo et Patault Kylian </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9 Avril 2023 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a92a37805b71fc17686fb54e65ec0b0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a37805b71fc17686fb54e65ec0b0bc">&#9670;&nbsp;</a></span>charger_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void charger_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__s.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>carte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>chemin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de chargement pour la map. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carte</td><td>Carte de type map_t </td></tr>
+    <tr><td class="paramname">chemin</td><td>Chemin pour accéder au fichier .txt pour générer la carte</td></tr>
+    <tr><td class="paramname">renderer</td><td>rendu du jeu pour afficher tous les éléments </td></tr>
+    <tr><td class="paramname">tileset</td><td>texture qui permet d'afficher la map en fonction de la map </td></tr>
+    <tr><td class="paramname">map</td><td>map de type map_t </td></tr>
+    <tr><td class="paramname">perso</td><td>texture permettant de représenter le personnage (ici un pingouin) </td></tr>
+    <tr><td class="paramname">home_texture</td><td>texture du bouton Home pour l'afficher sur la fenêtre </td></tr>
+    <tr><td class="paramname">deb</td><td>indice de début pour avancer au fur et à mesure </td></tr>
+    <tr><td class="paramname">fin</td><td>indice de fin pour avancer, donc on affiche la map de 50 en 50 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35a12c24dc189629358813e679f834da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a12c24dc189629358813e679f834da">&#9670;&nbsp;</a></span>deplacements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deplacements </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__s.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>avancer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reculer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sauter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet de réaliser les déplacements en fonction de la / des touche(s) que l'on presse. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>map de type map_t </td></tr>
+    <tr><td class="paramname">avancer</td><td>valeur : TRUE ou FALSE si on avance ou pas </td></tr>
+    <tr><td class="paramname">reculer</td><td>valeur : TRUE ou FALSE si on recule ou pas </td></tr>
+    <tr><td class="paramname">sauter</td><td>valeur : TRUE ou FALSE si on saute ou pas </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf242ff17d946e137012b0cc25370b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf242ff17d946e137012b0cc25370b66">&#9670;&nbsp;</a></span>detect_obstacle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int detect_obstacle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__s.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui détecte les obstacles sur la map. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>la valeur </dd></dl>
+
+</div>
+</div>
+<a id="afbbbc30e73d9515c6b39fb2eba5444eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbbc30e73d9515c6b39fb2eba5444eb">&#9670;&nbsp;</a></span>detectCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int detectCollision </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>rect1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>rect2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui détecte les collisions entre 2 rectangles. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect1</td><td>rectangle SDL_Rect </td></tr>
+    <tr><td class="paramname">rect2</td><td>rectangle SDL_Rect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si pas de collision, 1 si collision </dd></dl>
+
+</div>
+</div>
+<a id="afdf33ef6507a8d51e0ab5210ce727466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf33ef6507a8d51e0ab5210ce727466">&#9670;&nbsp;</a></span>jeu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jeu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction génère la map du jeu et permet de jouer. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Si on a cliqué sur le bouton "Home" pour revenir au menu, et FALSE si un des éléments c'est mal chargé </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

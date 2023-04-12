@@ -113,7 +113,7 @@ void charger_base(personnage_t *pers, char *nomDossier) {
 */
 void sauvegarder_base(personnage_t *pers, char *nomDossier) {
   FILE *data_pers = fopen(nomDossier, "w");
-  coordonnees_t coord;
+  // coordonnees_t coord;
   if (data_pers != NULL) {
     if (!(feof(data_pers))) {
       fprintf(data_pers, "Nom=%s\n", pers->nom);
