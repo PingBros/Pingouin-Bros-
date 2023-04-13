@@ -82,7 +82,7 @@ void charger_base(personnage_t *pers, char *nomDossier) {
     if (!(feof(data_pers))) {
       fscanf(data_pers, "Nom=%s\n",nom);
       fscanf(data_pers, "Vie=%i\n", &vie);
-      fscanf(data_pers, "Vie=%i\n", &vie);
+      // fscanf(data_pers, "Vie=%i\n", &vie);
       fscanf(data_pers, "Degats=%i\n", &degats);
       fscanf(data_pers, "Vitesse_d=%i\n", &vitesse_d);
       fscanf(data_pers, "Vitesse_a=%i\n", &vitesse_a);

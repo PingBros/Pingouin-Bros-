@@ -17,17 +17,22 @@ int dep_ennemy(map_t *map, int *avancer_ennemy, int *sauter_ennemy, int *attaque
  *
  */
 SDL_Renderer *renderer = NULL;
+SDL_Window *screen = NULL;
 
 SDL_Texture *textures[3];
 SDL_Texture *coups[3];
 SDL_Texture *ennemy_texture[2];
 SDL_Texture *tileset = NULL;
+SDL_Texture *game_over = NULL;
+SDL_Texture *win = NULL;
 SDL_Texture *home_texture = NULL;
 SDL_Event event;
 SDL_Rect playerRect = {600, 357, 50, 60};
-SDL_Rect ennemy_rect = {850, 357, 50, 60};
-int check_attack_ennemy = 0;
+SDL_Rect ennemy_rect = {850, 365, 50, 60};
+SDL_Rect game_over_rect = {450, 150, 250, 250};
+SDL_Rect win_rect = {450, 150, 250, 250};
 
+int check_attack_ennemy = 0;
 int deb = 0;
 int fin = 50;
 int xVel = 0;
@@ -138,7 +143,6 @@ void Afficher(SDL_Renderer *renderer, SDL_Texture *tileset, map_t *map, SDL_Text
                 else
                     SDL_RenderCopy(renderer, ennemy_texture[0], NULL, &ennemy_rect);
             }
-
             if (attack == TRUE)
             {
                 SDL_RenderCopy(renderer, coups[2], NULL, &playerRect);
@@ -148,6 +152,32 @@ void Afficher(SDL_Renderer *renderer, SDL_Texture *tileset, map_t *map, SDL_Text
             SDL_RenderCopy(renderer, home_texture, NULL, &home_rect);
         }
     }
+    if (ennemy->vie == 0)
+    {
+        SDL_RenderCopy(renderer, win, NULL, &win_rect);
+        SDL_RenderPresent(renderer);
+        SDL_Delay(1000);
+        SDL_DestroyTexture(tileset);
+        SDL_DestroyTexture(perso);
+        SDL_DestroyTexture(home_texture);
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        map = NULL;
+        menu_principal();
+    }
+    if (player->pers->vie == 0)
+    {
+        SDL_RenderCopy(renderer, game_over, NULL, &game_over_rect);
+        SDL_RenderPresent(renderer);
+        SDL_Delay(1000);
+        SDL_DestroyTexture(tileset);
+        SDL_DestroyTexture(perso);
+        SDL_DestroyTexture(home_texture);
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        menu_principal();
+    }
+
     SDL_RenderPresent(renderer);
     if (check_saut == TRUE)
         SDL_Delay(30);
@@ -364,8 +394,6 @@ int jeu()
     listeItemG[2] = bouclier;
     charger_ping(player, "../src/fich_txt/pingouin.txt", "GMK", listeItemG, 3);
 
-    SDL_Window *screen;
-
     SDL_Surface *bgSurface = NULL;
 
     map_t *map = malloc(sizeof(map_t));
@@ -482,6 +510,40 @@ int jeu()
         }
         SDL_FreeSurface(ennemy_surface[i]);
     }
+    SDL_Surface *gameover = IMG_Load("../IMG/game_over.png");
+    if (gameover == NULL)
+    {
+        printf("Erreur lors du chargement de la surface : %s\n", SDL_GetError());
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        return FALSE;
+    }
+    game_over = SDL_CreateTextureFromSurface(renderer, gameover);
+    if (game_over == NULL)
+    {
+        printf("Erreur lors du chargement de la texture : %s\n", SDL_GetError());
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        return FALSE;
+    }
+    SDL_FreeSurface(gameover);
+    SDL_Surface *gamewin = IMG_Load("../IMG/win.png");
+    if (gamewin == NULL)
+    {
+        printf("Erreur lors du chargement de la surface : %s\n", SDL_GetError());
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        return FALSE;
+    }
+    win = SDL_CreateTextureFromSurface(renderer, gamewin);
+    if (win == NULL)
+    {
+        printf("Erreur lors du chargement de la texture : %s\n", SDL_GetError());
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(screen);
+        return FALSE;
+    }
+    SDL_FreeSurface(gamewin);
     SDL_Rect home_rect = {10, 10, 50, 50};
     int quit = 0;
     int avancer = FALSE;
@@ -492,7 +554,7 @@ int jeu()
     int sauter_ennemy = FALSE;
     int attaque_ennemy = FALSE;
     ennemy = malloc(sizeof(personnage_t));
-    charger_base(ennemy, "../src/stat/chasseur.txt");
+    charger_base(ennemy, "../src/fich_txt/chasseur.txt");
     while (fin != map->largeur && !quit)
     {
         Afficher(renderer, tileset, map, textures[2], home_texture, deb, fin);
@@ -517,6 +579,8 @@ int jeu()
                         // Fermeture de la fenetre du jeu
                         SDL_DestroyTexture(home_texture);
                         SDL_DestroyRenderer(renderer);
+                        SDL_DestroyTexture(game_over);
+                        SDL_DestroyTexture(win);
                         SDL_DestroyWindow(screen);
                         destruction_pingouin(&player);
                         //  Affichage du menu principal
@@ -562,15 +626,13 @@ int jeu()
                 }
                 break;
             }
-            // collision(map);
         }
         deplacements(map, avancer, reculer, sauter);
-        if (choixdep_ennemy(&avancer_ennemy, &sauter_ennemy, &attaque_ennemy, &reculer_ennemy))
-            dep_ennemy(map, &avancer_ennemy, &sauter_ennemy, &attaque_ennemy, &reculer_ennemy, ennemy);
-        // SDL_Delay(250);
-        // SDL_RenderClear(renderer);
-        // deb += 1;
-        // fin += 1;
+        if (ennemy->vie != 0 || player->pers->vie != 0)
+        {
+            if (choixdep_ennemy(&avancer_ennemy, &sauter_ennemy, &attaque_ennemy, &reculer_ennemy))
+                dep_ennemy(map, &avancer_ennemy, &sauter_ennemy, &attaque_ennemy, &reculer_ennemy, ennemy);
+        }
     }
 
     do
@@ -580,6 +642,8 @@ int jeu()
 
     SDL_DestroyTexture(tileset);
     SDL_DestroyRenderer(renderer);
+    SDL_DestroyTexture(game_over);
+    SDL_DestroyTexture(win);
     SDL_DestroyWindow(screen);
     destruction_pingouin(&player);
     SDL_Quit();
@@ -597,23 +661,30 @@ int jeu()
 void deplacements(map_t *map, int avancer, int reculer, int sauter)
 {
     int h_saut = 17;
+    int init_x = playerRect.x;
     if (sauter)
         check_saut = TRUE;
     if (reculer)
     {
         if (playerRect.x > 600)
             playerRect.x -= 1;
+        Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
     }
     if (avancer)
     {
+
         if (sauter)
         {
+            init_x = playerRect.x;
             while (h_saut != 0)
             {
 
                 playerRect.y -= 2;
                 player->pers->coord.y = playerRect.y;
-                playerRect.x += 1;
+                if (playerRect.x <= init_x + 12)
+                {
+                    playerRect.x += 1;
+                }
                 player->pers->coord.x = playerRect.x;
 
                 h_saut--;
@@ -634,18 +705,19 @@ void deplacements(map_t *map, int avancer, int reculer, int sauter)
 
                 Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
             }
+            //  check_saut = FALSE;
             sauter = FALSE;
         }
-        else
+        if (!sauter)
+        {
             playerRect.x += 1;
+            Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
+        }
     }
     if (sauter)
     {
         while (h_saut != 0)
         {
-            //   if (detect_obstacle(map))
-            // printf("%d \n", detect_obstacle(map));
-
             playerRect.y -= 2;
             player->pers->coord.y = playerRect.y;
             h_saut--;
@@ -653,7 +725,6 @@ void deplacements(map_t *map, int avancer, int reculer, int sauter)
         }
         while (h_saut != 17 && sauter)
         {
-            // printf("%d \n", detect_obstacle(map));
             if (!detect_obstacle(map))
             {
                 playerRect.y += 2;
@@ -747,7 +818,7 @@ int dep_ennemy(map_t *map, int *avancer_ennemy, int *sauter_ennemy, int *attaque
     {
         while (ennemy_rect.y >= (320))
         {
-            ennemy_rect.y -= 5;
+            ennemy_rect.y -= 3;
             ennemy_rect.x -= xVel;
             ennemy->coord.y = ennemy_rect.y;
             ennemy->coord.x = ennemy_rect.x;
@@ -756,18 +827,18 @@ int dep_ennemy(map_t *map, int *avancer_ennemy, int *sauter_ennemy, int *attaque
                 ennemy_rect.x = map->largeur + ennemy_rect.w;
                 ennemy->coord.x = ennemy_rect.x;
             }
-            /* else if (ennemy_rect.x > map->largeur - ennemy_rect.w)
-             {
-                 ennemy_rect.x = map->largeur - ennemy_rect.w;
-                 ennemy->coord.x = ennemy_rect.x;
-             }*/
+            else if (ennemy_rect.x > map->largeur - ennemy_rect.w)
+            {
+                ennemy_rect.x = map->largeur - ennemy_rect.w;
+                ennemy->coord.x = ennemy_rect.x;
+            }
             // Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
         }
         while (ennemy_rect.y <= (357))
         {
-            ennemy_rect.y += 5;
+            ennemy_rect.y += 3;
             ennemy->coord.y = ennemy_rect.y;
-            //  Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
+            // Afficher(renderer, tileset, map, textures[1], home_texture, deb, fin);
         }
         *sauter_ennemy = FALSE;
     }
@@ -782,12 +853,12 @@ int dep_ennemy(map_t *map, int *avancer_ennemy, int *sauter_ennemy, int *attaque
             {
                 ennemy_rect.x = map->largeur + ennemy_rect.w;
                 ennemy->coord.x = ennemy_rect.x;
-            } /*
+            }
              else if (ennemy_rect.x > map->largeur - ennemy_rect.w)
              {
                  ennemy_rect.x = map->largeur - ennemy_rect.w;
                  ennemy->coord.x = ennemy_rect.x;
-             }*/
+             }
             n--;
         }
     }
